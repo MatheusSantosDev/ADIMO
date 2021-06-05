@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"	xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="~{fragmentos :: head('home')}"></head>
+
+<body>
+	<header
+		style="font-weight: bold; font-family: Arial, Helvetica, sans-serif; color: #404C51;">
+		<div class="container mt-3">
+			<div class="col text-right">
+				<ul class="nav justify-content-end">
+
+					<li class="nav-link "
+						th:if="${#httpServletRequest.remoteUser} != null">Olá!
+						[[${#httpServletRequest.remoteUser}]]
+						<form action="/logout" method="post"
+							class="navbar-form navbar-right">
+
+							<button type="submit" class="btn btn-primary btn-sm">
+
+								<span class="glyphicon glyphicon-log-out"></span> Sair
+							</button>
+							<!-- 					<input type="hidden" th:name="${_csrf.parameterName}" -->
+							<!-- 						th:value="${_csrf.token}" /> -->
+						</form>
+						<br>
+						<a class="btn btn-primary btn-sm" href="javascript:history.back()">Voltar</a>
+						
+					</li>
+					<li class="nav-link "
+						th:if="${#httpServletRequest.remoteUser} == null"><a
+						href="/entrar" class="btn btn-primary btn-sm"> Efetuar Login</a></li>
+
+				</ul>
+			</div>
+
+		</div>
+	</header>		
+
+</body>
+
+</html>
