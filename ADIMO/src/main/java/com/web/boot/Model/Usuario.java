@@ -37,11 +37,11 @@ public class Usuario {
 	
 	@ManyToMany(fetch = FetchType.EAGER)						//toda vez que eu buscar os usuario já traz as permissoes dele
 	@JoinTable(name = "usuario_permissao",						//onde vou estar relacionando com a tabela Usuario_Permissao
-	joinColumns = @JoinColumn (name = "codigo_usuario"),		//relacionamento principal 
-	inverseJoinColumns = @JoinColumn(name = "codigo_permissao"))//relacionamento da classe <permissao>  
+	joinColumns = @JoinColumn (name = "usuario_codigo"),		//relacionamento principal 
+	inverseJoinColumns = @JoinColumn(name = "permissao_codigo"))//relacionamento da classe <permissao>  
 	private List<Permissao> permissoes;
 	
-	public Usuario() { } // spring data jpa precisa de um construtor vazio
+	public Usuario() { }  // spring data jpa precisa de um construtor vazio
 
 	public Long getCodigo() {
 		return codigo;
