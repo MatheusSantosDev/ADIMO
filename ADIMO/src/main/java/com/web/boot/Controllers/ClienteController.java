@@ -28,10 +28,10 @@ public class ClienteController {
 	@GetMapping("/imoveis")
 	public ModelAndView listarImoveis() {
 		
-		ModelAndView mv = new ModelAndView("");
+		ModelAndView mv = new ModelAndView("/Cliente/ListaImoveis");
 		
 		List<Imovel> imoveis = imovelRepository.findAll();
-		mv.addObject(imoveis);
+		mv.addObject("imoveis", imoveis);
 		
 		return mv;
 	}

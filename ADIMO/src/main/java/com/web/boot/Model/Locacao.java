@@ -1,5 +1,6 @@
 package com.web.boot.Model;
 
+import java.time.LocalDateTime;
 import java.time.LocalTime;
 
 import javax.persistence.Entity;
@@ -30,7 +31,7 @@ public class Locacao {
 	private FichaCliente ficha;
 	
 	@NotNull
-	private LocalTime data_inicial;
+	private LocalDateTime data_inicial;
 
 	public long getId() {
 		return id;
@@ -56,11 +57,11 @@ public class Locacao {
 		this.ficha = ficha;
 	}
 
-	public LocalTime getData_inicial() {
+	public LocalDateTime getData_inicial() {
 		return data_inicial;
 	}
 
-	public void setData_inicial(LocalTime data_inicial) {
+	public void setData_inicial(LocalDateTime data_inicial) {
 		this.data_inicial = data_inicial;
 	}
 

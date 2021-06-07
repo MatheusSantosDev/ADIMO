@@ -1,0 +1,32 @@
+<div class="container" th:fragment="form(locacao, action)">
+	<div class="row">
+		<form th:object="${locacao}" th:action="${action}" method="POST">
+		
+			<div class="mb-3">
+				<label>Imovel</label> <select name="imovel">
+					<option th:each="imovel: ${imoveis}" th:value="${imovel.id}"
+						th:text="${imovel.descricao}"></option>
+				</select>
+			</div>
+			
+			<div class="mb-3">
+				<label >Ficha</label> <select name="ficha">
+					<option th:each="ficha: ${fichas}" th:value="${ficha.id}"
+						th:text="${ficha.email}"></option>
+				</select>
+			</div>
+			
+<!-- 			<div class="mb-3"> -->
+<!-- 				<label class="form-label">Imovel</label> <input class="form-control" -->
+<!-- 					th:errorclass="is-invalid" type="text" th:field="*{imovel}"> -->
+<!-- 			</div> -->
+<!-- 			<div class="mb-3"> -->
+<!-- 				<label class="form-label">Ficha</label> <input class="form-control" -->
+<!-- 					th:errorclass="is-invalid" type="text" th:field="*{ficha}"> -->
+<!-- 			</div> -->
+
+			<button class="btn btn-primary" type="submit">Cadastrar</button>
+			<a href="javascript:history.back()">Voltar</a>
+		</form>
+	</div>
+</div>

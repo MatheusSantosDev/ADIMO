@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="~{fragmentos :: head('Criar Ficha')}"></head>
+
+<body>
+	<header th:replace="~{fragmentos :: header('Nova Ficha')}"></header>
+	
+
+	<div th:replace="~{atendente/dashboard/FragmentoFicha :: form(ficha, '/dashAtendente/criarFicha')}">Formulário</div>
+
+
+</body>
+
+</html>

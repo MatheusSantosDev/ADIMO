@@ -1,0 +1,29 @@
+<div class="container" th:fragment="form(ficha, action)">
+	<div class="row">
+		<form th:object="${ficha}" th:action="${action}" method="POST">
+			<div class="mb-3">
+				<label class="form-label">Nome</label>
+				<input class="form-control" th:errorclass="is-invalid" type="text" th:field="*{nome}">
+			</div>
+			<div class="mb-3">
+				<label class="form-label">CPF</label>
+				<input class="form-control" th:errorclass="is-invalid" type="text" th:field="*{cpf}">
+			</div>
+			<div class="mb-3">
+				<label class="form-label">Endereco</label>
+				<input class="form-control" th:errorclass="is-invalid" type="text" th:field="*{endereco}">
+			</div>
+			<div class="mb-3">
+				<label class="form-label">Email</label>
+				<input class="form-control" th:errorclass="is-invalid" type="email" th:field="*{email}">
+			</div>
+			<div class="mb-3">
+				<label class="form-label">Status</label>
+				<input class="form-control" th:errorclass="is-invalid" type="text" th:field="*{status}">
+			</div>
+			
+			<button class="btn btn-primary" type="submit">Cadastrar</button>
+			<a href="javascript:history.back()">Voltar</a>
+		</form>
+	</div>
+</div>

@@ -34,7 +34,6 @@ public class Usuario {
 	@NotNull
 	private String senha;
 	
-	
 	@ManyToMany(fetch = FetchType.EAGER)						//toda vez que eu buscar os usuario já traz as permissoes dele
 	@JoinTable(name = "usuario_permissao",						//onde vou estar relacionando com a tabela Usuario_Permissao
 	joinColumns = @JoinColumn (name = "usuario_codigo"),		//relacionamento principal 

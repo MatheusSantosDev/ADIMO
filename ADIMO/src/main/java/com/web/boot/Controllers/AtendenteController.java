@@ -1,5 +1,7 @@
 package com.web.boot.Controllers;
 
+import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -39,10 +41,10 @@ public class AtendenteController {
 	@GetMapping("/criarFicha")
 	public ModelAndView formularioFicha() {
 
-		ModelAndView mv = new ModelAndView("");
+		ModelAndView mv = new ModelAndView("atendente/dashboard/CriarFicha");
 
 		FichaCliente ficha = new FichaCliente();
-		mv.addObject(ficha);
+		mv.addObject("ficha",ficha);
 		
 		return mv;
 	}
@@ -60,16 +62,16 @@ public class AtendenteController {
 	@GetMapping("/locacao")
 	public ModelAndView formularioLocacao() {
 		
-		ModelAndView mv = new ModelAndView("");
+		ModelAndView mv = new ModelAndView("atendente/dashboard/CriarLocacao");
 
 		Locacao locacao = new Locacao();
 		
 		List<Imovel> imoveis = imovelRepository.findAll();
 		List<FichaCliente> fichas = fichaRepository.findAll();
 		
-		mv.addObject(fichas);
-		mv.addObject(imoveis);
-		mv.addObject(locacao);
+		mv.addObject("fichas", fichas);
+		mv.addObject("imoveis", imoveis);
+		mv.addObject("locacao",locacao);
 		
 		return mv;
 	}
@@ -79,6 +81,7 @@ public class AtendenteController {
 		
 		ModelAndView mv = new ModelAndView("redirect:/dashAtendente");
 
+		locacao.setData_inicial(LocalDateTime.now());
 		locacaoRepository.save(locacao);
 		
 		return mv;
