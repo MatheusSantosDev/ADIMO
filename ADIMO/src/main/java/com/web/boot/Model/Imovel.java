@@ -89,11 +89,11 @@ public class Imovel {
 		this.valor = valor;
 	}
 
-//	@Override
-//	public String toString() {
-//		return "Imovel [id=" + id + ", titulo=" + titulo + ", endereco=" + endereco + ", descricao=" + descricao
-//				+ ", valor=" + valor + "]";
-//	}
+	@Override
+	public String toString() {
+		return "Tipo: " + titulo + ", endereço: " + endereco + ", descrição: " + descricao
+				+ ", valor: " + valor;
+	}
 	
 	
 }

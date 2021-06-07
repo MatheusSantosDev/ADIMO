@@ -5,20 +5,23 @@ import java.util.List;
 public class Interesses {
 	
 	private String email;
-	private List<Imovel> imoveis;
+	
+	private List<String> imoveis;
 	
 	public String getEmail() {
 		return email;
 	}
+	
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public List<Imovel> getImoveis() {
+	
+	public List<String> getImoveis() {
 		return imoveis;
 	}
-	public void setImoveis(List<Imovel> imoveis) {
+	
+	public void setImoveis(List<String> imoveis) {
 		this.imoveis = imoveis;
 	}
-	
 	
 }
