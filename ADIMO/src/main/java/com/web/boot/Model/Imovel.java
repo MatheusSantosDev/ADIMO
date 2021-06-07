@@ -88,6 +88,12 @@ public class Imovel {
 	public void setValor(double valor) {
 		this.valor = valor;
 	}
+
+//	@Override
+//	public String toString() {
+//		return "Imovel [id=" + id + ", titulo=" + titulo + ", endereco=" + endereco + ", descricao=" + descricao
+//				+ ", valor=" + valor + "]";
+//	}
 	
 	
 }

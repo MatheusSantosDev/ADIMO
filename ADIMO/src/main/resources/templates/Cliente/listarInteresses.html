@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="~{fragmentos :: head('Lista de interesses')}"></head>
+
+<body>
+	<header th:replace="~{HeaderBasico :: headerBasico()}"></header>
+	<div class="container">
+		<div class="col-12">
+
+			<table class="table" style="margin-top: .85em; text-align: center;">
+				<thead style="background-color: #F5F5F5;">
+					<tr>						
+						<th scope="col-2">Interesse</th>						
+					</tr>
+				</thead>
+
+				<tbody>		
+						
+<!-- 					<tr th:each="interesse : ${interesses.imoveis}"> -->
+<!-- 						<th scope="row" th:text="${interesse.imovel}"></th>						 -->
+<!-- 					</tr> -->
+				</tbody>
+			</table>
+			<a class="btn btn-primary" href="/imoveis/interesses"></a>
+		</div>
+	</div>
+
+<span th:text="${interesses.imoveis}"></span>	
+
+
+</body>
+
+</html>

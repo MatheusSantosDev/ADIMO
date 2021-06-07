@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="~{fragmentos :: head('Escolher Interesses')}"></head>
+
+<body>
+	<header th:replace="~{fragmentos :: header('Novo Interesse')}"></header>
+	
+
+	<div th:replace="~{Cliente/fraginteresses :: form(interesses, '/cliente/imoveis/interesses')}">Formulário</div>
+
+
+</body>
+
+</html>

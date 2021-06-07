@@ -22,6 +22,12 @@
 			<li class="nav-item"><a class="nav-link "
 				th:classappend="${#httpServletRequest.getRequestURI().startsWith('/usuarios') ? 'active':''}"
 				href="/usuarios">usuarios</a></li>
+			<li class="nav-item"><a class="nav-link "
+				th:classappend="${#httpServletRequest.getRequestURI().startsWith('/dashAtendente/criarFicha') ? 'active':''}"
+				href="/dashAtendente/criarFicha">Criar Ficha</a></li>
+				<li class="nav-item"><a class="nav-link "
+				th:classappend="${#httpServletRequest.getRequestURI().startsWith('/dashAtendente/locacao') ? 'active':''}"
+				href="/dashAtendente/locacao">Criar Locação</a></li>	
 			
 			<div class="col text-right">
 				<ul class="nav justify-content-end">

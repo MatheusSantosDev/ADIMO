@@ -21,6 +21,10 @@
 				<li class="nav-item"><a aria-current="page" class="nav-link"
 				th:classappend="${#httpServletRequest.getRequestURI().equals('/') ? 'active':''}"
 				href="/">Home</a></li>
+				<li class="nav-item"><a class="nav-link "
+				th:classappend="${#httpServletRequest.getRequestURI().startsWith('/cliente/imoveis') ? 'active':''}"
+				href="/cliente/imoveis">imoveis</a></li>
+						
 				<li class="nav-link ">Olá! [[${#httpServletRequest.remoteUser}]]
 					<form action="/logout" method="post"
 					class="navbar-form navbar-right">
