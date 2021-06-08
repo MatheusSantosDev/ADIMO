@@ -1,6 +1,6 @@
 <head th:fragment="head(titulo)">
 <!-- Required meta tags -->
-<meta charset="utf-8">
+<meta charset="UTF-8">
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -8,7 +8,7 @@
 <link rel="stylesheet"
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
 	integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-	crossorigin="anonymous">		
+	crossorigin="anonymous">
 
 <title th:text="${titulo}">titulo de todas as paginas do ADM</title>
 </head>
@@ -25,10 +25,10 @@
 			<li class="nav-item"><a class="nav-link "
 				th:classappend="${#httpServletRequest.getRequestURI().startsWith('/dashAtendente/criarFicha') ? 'active':''}"
 				href="/dashAtendente/criarFicha">Criar Ficha</a></li>
-				<li class="nav-item"><a class="nav-link "
+			<li class="nav-item"><a class="nav-link "
 				th:classappend="${#httpServletRequest.getRequestURI().startsWith('/dashAtendente/locacao') ? 'active':''}"
-				href="/dashAtendente/locacao">Criar Locação</a></li>	
-			
+				href="/dashAtendente/locacao">Criar Locação</a></li>
+
 			<div class="col text-right">
 				<ul class="nav justify-content-end">
 
@@ -41,18 +41,18 @@
 
 								<span class="glyphicon glyphicon-log-out"></span> Sair
 							</button>
-<!-- 							<input type="hidden" th:name="${_csrf.parameterName}" -->
-<!-- 								th:value="${_csrf.token}" /> -->
+							<!-- 							<input type="hidden" th:name="${_csrf.parameterName}" -->
+							<!-- 								th:value="${_csrf.token}" /> -->
 						</form>
 					</li>
 				</ul>
 			</div>
-			
-			
+
+
 		</ul>
-		
+
 	</div>
-	
+
 
 	<div class="container mt-3">
 		<div class="row"></div>
@@ -62,3 +62,10 @@
 	</div>
 </header>
 
+
+<footer th:fragment="footer()" class="footer">
+	<div class="container text-center">
+		<span class="text-muted">@Todos os Direitos Reservados</span>
+		
+	</div>	
+</footer>

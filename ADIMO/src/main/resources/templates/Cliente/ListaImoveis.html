@@ -24,10 +24,7 @@
 						<th scope="row" th:text="${imovel.titulo}"></th>
 						<td th:text="${imovel.endereco}"></td>
 						<td th:text="${imovel.descricao}"></td>
-						<td th:text="${imovel.valor}"></td>
-						<td>
-														
-						</td>
+						<td th:text="${imovel.valor}"></td>						
 					</tr>
 				</tbody>
 			</table>
@@ -35,7 +32,7 @@
 		</div>
 	</div>
 
-
+<footer th:replace="~{fragmentos :: footer()}"></footer>
 
 
 </body>

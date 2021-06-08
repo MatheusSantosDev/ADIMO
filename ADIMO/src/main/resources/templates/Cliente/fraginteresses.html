@@ -1,5 +1,5 @@
 <div class="container" th:fragment="form(interesses, action)">
-	<div class="row">
+	<div class="col-12">
 		<form th:object="${interesses}" th:action="${action}" method="POST">
 
 			<div class="container">
@@ -12,6 +12,7 @@
 								<th scope="col-2">Endereço</th>
 								<th scope="col-2">Descrição</th>
 								<th scope="col-2">Valor</th>
+								<th scope="col-2">Seleções</th>
 							</tr>
 						</thead>
 
@@ -21,15 +22,17 @@
 								<td th:text="${imovel.endereco}"></td>
 								<td th:text="${imovel.descricao}"></td>
 								<td th:text="${imovel.valor}"></td>
-								<td><input type="checkbox" th:field="*{imoveis}" th:value="${imovel}" /> <label th:for="${imoveis}"></label></td>
+								<td><input type="checkbox" th:field="*{imoveis}"
+									th:value="${imovel}" /> <label th:for="${imoveis}"></label></td>
 							</tr>
 						</tbody>
 					</table>
+					<button class="btn btn-primary" type="submit">Cadastrar</button>
+					<a href="javascript:history.back()">Voltar</a>
 				</div>
 			</div>
 
-			<button class="btn btn-primary" type="submit">Cadastrar</button>
-			<a href="javascript:history.back()">Voltar</a>
+
 		</form>
 	</div>
 </div>

@@ -1,6 +1,6 @@
 <head th:fragment="head(titulo)">
 <!-- Required meta tags -->
-<meta charset="utf-8">
+<meta charset="UTF-8">
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -26,17 +26,21 @@
 				href="/cliente/imoveis">imoveis</a></li>
 						
 				<li class="nav-link ">Olá! [[${#httpServletRequest.remoteUser}]]
-					<form action="/logout" method="post"
-					class="navbar-form navbar-right">
+								
+				</li>
+				<li class="nav-link ">
+						<form action="/logout" method="post"
+							class="navbar-form navbar-right">
 
-					<button type="submit" class="btn btn-secondary btn-sm">
+							<button type="submit" class="btn btn-primary btn-sm">
 
-						<span class="glyphicon glyphicon-log-out"></span> Sair
-					</button>
-<!-- 					<input type="hidden" th:name="${_csrf.parameterName}" -->
-<!-- 						th:value="${_csrf.token}" /> -->
-				</form>				
-				</li>					
+								<span class="glyphicon glyphicon-log-out"></span> Sair
+							</button>
+							<!-- 					<input type="hidden" th:name="${_csrf.parameterName}" -->
+							<!-- 						th:value="${_csrf.token}" /> -->
+						</form>
+					
+					</li>					
 		</ul>
 	</div>
 		

@@ -4,12 +4,12 @@
 <head th:replace="~{fragmentos :: head('Escolher Interesses')}"></head>
 
 <body>
-	<header th:replace="~{fragmentos :: header('Novo Interesse')}"></header>
+	<header th:replace="~{HeaderBasico :: headerBasico()}"></header>
 	
 
 	<div th:replace="~{Cliente/fraginteresses :: form(interesses, '/cliente/imoveis/interesses')}">Formulário</div>
 
-
+<footer th:replace="~{fragmentos :: footer()}"></footer>
 </body>
 
 </html>
