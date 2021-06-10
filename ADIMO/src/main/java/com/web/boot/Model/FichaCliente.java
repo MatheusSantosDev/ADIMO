@@ -19,7 +19,7 @@ public class FichaCliente {
 	private String nome;
 	
 	@NotNull
-	private int cpf;
+	private String cpf;
 	
 	@NotNull
 	private String endereco;
@@ -68,11 +68,11 @@ public class FichaCliente {
 		this.nome = nome;
 	}
 
-	public int getCpf() {
+	public String getCpf() {
 		return cpf;
 	}
 
-	public void setCpf(int cpf) {
+	public void setCpf(String cpf) {
 		this.cpf = cpf;
 	}
 

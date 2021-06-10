@@ -28,6 +28,9 @@
 			<li class="nav-item"><a class="nav-link "
 				th:classappend="${#httpServletRequest.getRequestURI().startsWith('/dashAtendente/locacao') ? 'active':''}"
 				href="/dashAtendente/locacao">Criar Locação</a></li>
+			<li class="nav-item"><a class="nav-link "
+				th:classappend="${#httpServletRequest.getRequestURI().startsWith('/dashAtendente/locacao/listar') ? 'active':''}"
+				href="/dashAtendente/locacao/listar">Locações</a></li>
 
 			<div class="col text-right">
 				<ul class="nav justify-content-end">

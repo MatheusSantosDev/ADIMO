@@ -1,0 +1,9 @@
+CREATE TABLE IF NOT EXISTS `ADIMO_`.`ficha_cliente` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `nome` VARCHAR(45) NOT NULL,
+  `cpf` VARCHAR(15) NOT NULL,
+  `endereco` VARCHAR(55) NOT NULL,
+  `email` VARCHAR(45) NOT NULL,
+  `status` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`id`))
+ENGINE = InnoDB;

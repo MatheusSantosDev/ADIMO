@@ -85,4 +85,16 @@ public class AtendenteController {
 		
 		return mv;
 	}
+	
+	@GetMapping("/locacao/listar")
+	public ModelAndView listaLocacao() {
+		
+		ModelAndView mv = new ModelAndView("atendente/dashboard/ListarLocacoes");
+		
+		List<Locacao> locacoes = locacaoRepository.findAll();
+		
+		mv.addObject("locacoes", locacoes);
+		
+		return mv;
+	}
 }

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="~{fragmentos :: head('Lista de locações')}"></head>
+
+<body>
+	<header th:replace="~{fragmentos :: header('Listar Locações')}"></header>
+	<div class="container">
+		<div class="col-12">
+
+			<table class="table" style="margin-top: .85em; text-align: center;">
+				<thead style="background-color: #F5F5F5;">
+					<tr>
+						<th scope="col-2">Id</th>
+						<th scope="col-2">Endereço do imóvel</th>
+						<th scope="col-2">Email do cliente</th>
+						<th scope="col-2">Data de locação</th>
+					</tr>
+				</thead>
+
+				<tbody>
+					<tr th:each="locacao : ${locacoes}">
+						<th scope="row" th:text="${locacao.id}"></th>
+						<td th:text="${locacao.imovel.endereco}"></td>
+						<td th:text="${locacao.ficha.email}"></td>
+						<td th:text="${locacao.data_inicial.toLocalDate()}"></td>						
+					</tr>
+				</tbody>
+			</table>
+			<a href="javascript:history.back()">Voltar</a>
+		</div>
+	</div>
+
+<footer th:replace="~{fragmentos :: footer()}"></footer>
+
+
+</body>
+
+</html>
